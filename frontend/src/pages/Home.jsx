@@ -27,24 +27,27 @@ const Home = () => {
   return (
     
     <div className='pb-24'>
-      <MainPage />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-20">
+    <MainPage />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-20">
       {categories.map((category) => (
-          <Link
-            key={category.idCategory} 
-            to={`/mealcard/${category.strCategory}`} // Link with category parameter
-            className="  flex flex-col cursor-pointer text-center transform hover:scale-105 transition duration-300 mx-10 "
-          >
-            
-            <img src={category.strCategoryThumb} 
-            className='shadow-2xl rounded-xl hover:shadow-lg animate-fadeIn' alt={category.strCategory} />
-            <h2 className='text-black transition-colors duration-300 hover:text-yellow-800'>{category.strCategory}</h2>
-         
-          </Link>
-        ))}
-      </div>
-      {/* <MealCard detail={meals}  /> */}
+        <Link
+          key={category.idCategory} 
+          to={`/mealcard/${category.strCategory}`} // Link with category parameter
+          className="flex flex-col cursor-pointer text-center transform hover:scale-105 transition duration-300 mx-10"
+        >
+          <img
+            src={category.strCategoryThumb} 
+            className='shadow-2xl rounded-xl hover:shadow-lg animate-fadeIn'
+            alt={category.strCategory}
+          />
+          <h2 className='text-black font-bold text-lg sm:text-xl lg:text-2xl mt-4 mb-6 transition-colors duration-300 hover:text-yellow-800'>
+            {category.strCategory}
+          </h2>
+        </Link>
+      ))}
     </div>
+  </div>
+  
   );
 };
 
