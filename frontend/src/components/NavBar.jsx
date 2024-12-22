@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Logo from '../images/logo.png'
+import Logo from '../Images/logo.png'
 import { Link } from 'react-router-dom'
 // import Home from '../pages/Home'
 const NavBar = () => {
