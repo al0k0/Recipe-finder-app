@@ -19,7 +19,7 @@ const Contact = () => {
     console.log("Form Data Submitted:", formData); // Debugging
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://recipe-finder-app-1clf.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
